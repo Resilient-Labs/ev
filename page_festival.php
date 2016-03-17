@@ -4,13 +4,13 @@
  */
 
 get_header(); ?>
-    <link href="/wp-content/themes/cityawake/style_cityawake.css" rel="stylesheet" />
+    <link href="../wp-content/themes/ev/style_cityawake.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.0.0-alpha1.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
     <?php?>
 
         <div class="hero-section">
-            <img src="/wp-content/themes/cityawake/city-awake-white.png">
+            <img src="../wp-content/themes/ev/city-awake-white.png">
             <a class="festivalbutton" id="attendbutton" href="https://socialimpactexpo.eventbrite.com" target="_blank">
                 <p>RSVP for the Social Impact Expo</p>
             </a>
@@ -42,7 +42,7 @@ get_header(); ?>
                                     </p>
                                     <h2>The Festival is supported by:</h2>
                                     <a href="https://angel.co/hyperplane" target="_blank">
-                                        <img src="/wp-content/themes/cityawake/images/hyperplane.png">
+                                        <img src="/wp-content/themes/ev/images/hyperplane.png">
                                     </a>
                                 </div>
                                 <div class="center-section" id="middle-section">
@@ -58,7 +58,7 @@ get_header(); ?>
                                         <h2>Download DoneGood</h2>
                                         <p>Download DoneGood, the official Festival app, for events, information, and more!</p>
                                         <a class="" href="http://www.donegood.co/" target="_blank">
-                                            <img id="donegood" src="/wp-content/themes/cityawake/images/donegood.png">
+                                            <img id="donegood" src="/wp-content/themes/ev/images/donegood.png">
                                         </a>
                                     </div>
                                     <!-- .entry-content -->
@@ -195,7 +195,7 @@ get_header(); ?>
                     window.setTimeout(function () {
                         $('#overlay').addClass('visible');
                         $('html').addClass('noScroll');
-                        $modalLocation = "/wp-content/themes/cityawake/modals.html #intro";
+                        $modalLocation = "/wp-content/themes/ev/modals.html #intro";
                         $('#modal').load($modalLocation);
                     }, 0);
 
@@ -239,7 +239,7 @@ get_header(); ?>
                     $this = $(this);
                     $('#overlay').addClass('visible');
                     $('html').addClass('noScroll');
-                    $modalLocation = "/wp-content/themes/cityawake/modals.html #" + $this.data("modal");
+                    $modalLocation = "/wp-content/themes/ev/modals.html #" + $this.data("modal");
                     $('#modal').load($modalLocation);
                 });
                 $('#overlay').click(function () {

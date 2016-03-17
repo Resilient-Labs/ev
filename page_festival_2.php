@@ -4,7 +4,7 @@
  */
 
 get_header(); ?>
-	<link href="/wp-content/themes/cityawake/style_cityawake.css" rel="stylesheet" />
+	<link href="/wp-content/themes/ev/style_cityawake.css" rel="stylesheet" />
 	<script src="https://code.jquery.com/jquery-3.0.0-alpha1.js"></script>
 	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 <?php
@@ -18,21 +18,21 @@ BEGIN SLIDESHOW
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <!-- use jssor.slider.mini.js (40KB) instead for release -->
 <!-- jssor.slider.mini.js = (jssor.js + jssor.slider.js) -->
-<script type="text/javascript" src="/wp-content/themes/cityawake/js/slider/jssor.js"></script>
-<script type="text/javascript" src="/wp-content/themes/cityawake/js/slider/jssor.slider.js"></script>
-<script type="text/javascript" src="/wp-content/themes/cityawake/js/slider/jssor.customization.js"></script>
-<link href="/wp-content/themes/cityawake/css/jssor-slider.css" rel="stylesheet" />
+<script type="text/javascript" src="/wp-content/themes/ev/js/slider/jssor.js"></script>
+<script type="text/javascript" src="/wp-content/themes/ev/js/slider/jssor.slider.js"></script>
+<script type="text/javascript" src="/wp-content/themes/ev/js/slider/jssor.customization.js"></script>
+<link href="/wp-content/themes/ev/css/jssor-slider.css" rel="stylesheet" />
 <!-- Jssor Slider Begin -->
 <!-- To move inline styles to css file/block, please specify a class name for each element. -->
 
 <div id="slider1_container" style="position: relative; margin: 0 auto;
-        top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden; background-image: url('/wp-content/themes/cityawake/images/headers/cityscape.jpg')">
+        top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden; background-image: url('/wp-content/themes/ev/images/headers/cityscape.jpg')">
         <!-- Slides Container -->
 <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px;
             height: 500px; overflow: hidden;">
             <div>
               <a href="https://www.eventbrite.com/e/city-awake-festival-2015-partner-open-house-tickets-18348324332" title="City Awake Festival" target="_blank">
-                <img u="image" src="/wp-content/themes/cityawake/images/Festival2015Logo_withdate.png" />
+                <img u="image" src="/wp-content/themes/ev/images/Festival2015Logo_withdate.png" />
                 <div class="festivalbutton" id="attendbutton"> <p>Join Our Next Open House</p></div>
               </a>
             </div>
@@ -213,7 +213,7 @@ END SLIDESHOW
         $this = $(this);
         $('#overlay').addClass('visible');
         $('html').addClass('noScroll');
-        $modalLocation = "/wp-content/themes/cityawake/modals.html #" + $this.data("modal");
+        $modalLocation = "/wp-content/themes/ev/modals.html #" + $this.data("modal");
         $('#modal').load($modalLocation);
     });
     $('#overlay').click(function(){
