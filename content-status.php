@@ -2,31 +2,21 @@
 /**
  * The template for displaying posts in the Status post format
  *
- * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @since 1.0.6
  */
 ?>
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<div class="post-format"><?php _e( '<i class="fa fa-plus-square"></i> Status', 'arcade-basic' ); ?></div>
+		<?php echo get_avatar( get_the_author_meta( 'ID' ), 60 ); ?>
+        <div class="author"><span class="vcard author"><span class="fn"><?php the_author(); ?></span></span></div>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="entry-content">
-		<?php
-			/* translators: %s: Name of current post */
-			the_content( sprintf(
-				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'twentythirteen' ),
-				the_title( '<span class="screen-reader-text">', '</span>', false )
-			) );
+		<div class="entry-content description">
+			<time class="date published updated" datetime="<?php echo get_the_date( 'Y-m-d' ) . 'T' . get_the_time( 'H:i' ) . 'Z'; ?>">
+				<?php printf( __( 'Posted on %1$s at %2$s', 'arcade-basic' ), get_the_date(), get_the_time() );	?>
+			</time>
 
-			wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) );
-		?>
-	</div><!-- .entry-content -->
+			<?php the_content( __( 'Read more', 'arcade-basic') ); ?>
+	    </div><!-- .entry-content -->
 
-	<footer class="entry-meta">
-		<?php twentythirteen_entry_meta(); ?>
-		<?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
-
-		<?php if ( is_single() && get_the_author_meta( 'description' ) && is_multi_author() ) : ?>
-			<?php get_template_part( 'author-bio' ); ?>
-		<?php endif; ?>
-	</footer><!-- .entry-meta -->
-</article><!-- #post -->
+	    <?php get_template_part( 'content', 'footer' ); ?>
+    </article>

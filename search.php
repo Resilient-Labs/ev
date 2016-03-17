@@ -1,36 +1,39 @@
 <?php
 /**
- * The template for displaying Search Results pages
+ * The template for displaying Search Results pages.
  *
- * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @since 1.0.0
  */
-
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+	<div class="container">
+		<div class="row">
+            <section id="primary" <?php bavotasan_primary_attr(); ?>>
+        		<?php if ( have_posts() ) : ?>
 
-		<?php if ( have_posts() ) : ?>
+        			<header id="archive-header">
+						<h1 class="page-title"><?php
+							global $wp_query;
+						    $num = $wp_query->found_posts;
+							printf( '%1$s "%2$s"',
+							    $num . __( ' search results for', 'arcade-basic'),
+							    get_search_query()
+							);
+						?></h1>
+        			</header>
+        			<?php
+        			while ( have_posts() ) : the_post();
+        				get_template_part( 'content', get_post_format() );
+        			endwhile;
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentythirteen' ), get_search_query() ); ?></h1>
-			</header>
+        			bavotasan_pagination();
+        		else :
+        			get_template_part( 'content', 'none' );
+        		endif;
+        		?>
+        	</section><!-- #primary.c8 -->
+            <?php get_sidebar(); ?>
+        </div>
+    </div>
 
-			<?php /* The loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
-			<?php endwhile; ?>
-
-			<?php twentythirteen_paging_nav(); ?>
-
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-		<?php endif; ?>
-
-		</div><!-- #content -->
-	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

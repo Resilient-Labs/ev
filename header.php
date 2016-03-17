@@ -1,113 +1,86 @@
 <?php
 /**
- * The Header template for our theme
+ * The Header for our theme.
  *
- * Displays all of the <head> section and everything up till <div id="main">
+ * Displays all of the <head> section and everything up till <main>
+ * and the left sidebar conditional
  *
- * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @since 1.0.0
  */
 ?><!DOCTYPE html>
-<!--[if IE 7]>
-<html class="ie ie7" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if IE 8]>
-<html class="ie ie8" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if !(IE 7) & !(IE 8)]><!-->
 <html <?php language_attributes(); ?>>
-<!--<![endif]-->
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width">
-	<meta property="og:image" content="http://cityawake.is/wp-content/themes/ev/images/cityawakebanner.png" />
-
-	<title>
-		City Awake<?php /* wp_title( '|', true, 'right' ); */ ?>
-
-
-		</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<link rel="shortcut icon" href="/wp-content/themes/ev/images/favicon.png" />
-	<!--[if lt IE 9]>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
-	<![endif]-->
+	<!--[if IE]><script src="<?php echo BAVOTASAN_THEME_URL; ?>/library/js/html5.js"></script><![endif]-->
 	<?php wp_head(); ?>
-	<link href="../wp-content/themes/ev/style_cityawake.css" rel="stylesheet" />
-	<link href="../wp-content/themes/ev/festival.css" rel="stylesheet" />
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-	<script type="text/javascript">
-	$(document).ready(function(){
-		var figcaptionWidth = $("figure.gallery-item").width();
-		$("figure.gallery-item").height(figcaptionWidth + "px");
-	});
-	</script>
 </head>
-
+<?php
+$bavotasan_theme_options = bavotasan_theme_options();
+$space_class = '';
+?>
 <body <?php body_class(); ?>>
-	<div id="page" class="hfeed site <?php
-			if (is_page('front-page') ||
-					is_page('blog') ||
-					is_page('single') ||
-					is_page('accelerate')):
-					echo "accelerate";
-				else:
-					/*
-					if (is_page('celebrate') ||
-					is_page('team')):
-					*/
-					echo "celebrate";
-				endif;
-					?>">
 
+	<div id="page">
 
-		<header id="masthead" class="site-header" role="banner">
+		<header id="header">
+			<nav id="site-navigation" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+				<h3 class="sr-only"><?php _e( 'Main menu', 'arcade-basic' ); ?></h3>
+				<a class="sr-only" href="#primary" title="<?php esc_attr_e( 'Skip to content', 'arcade-basic' ); ?>"><?php _e( 'Skip to content', 'arcade-basic' ); ?></a>
 
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				    </button>
+				</div>
 
-<!--
-			<div id="navcolors">
-				<div class="accelerate"></div>
-				<div class="celebrate"></div>
+				<div class="collapse navbar-collapse">
+					<?php
+					$menu_class = ( is_rtl() ) ? ' navbar-right' : '';
+					wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'menu_class' => 'nav navbar-nav' . $menu_class, 'fallback_cb' => 'bavotasan_default_menu' ) );
+					?>
+				</div>
+			</nav><!-- #site-navigation -->
+
+			 <div class="title-card-wrapper">
+                <div class="title-card">
+    				<div id="site-meta">
+						<?php $tag = ( is_front_page() && is_home() ) ? 'h1' : 'div'; ?>
+    					<<?php echo $tag; ?> id="site-title">
+    						<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+    					</<?php echo $tag; ?>>
+
+    					<?php if ( $bavotasan_theme_options['header_icon'] ) { ?>
+    					<i class="fa <?php echo $bavotasan_theme_options['header_icon']; ?>"></i>
+    					<?php } else {
+    						$space_class = ' class="margin-top"';
+    					} ?>
+
+    					<div id="site-description"<?php echo $space_class; ?>>
+    						<?php bloginfo( 'description' ); ?>
+    					</div>
+						<?php
+						/**
+						 * You can overwrite the defeault 'See More' text by defining the 'BAVOTASAN_SEE_MORE'
+						 * constant in your child theme's function.php file.
+						 */
+						if ( ! defined( 'BAVOTASAN_SEE_MORE' ) )
+							define( 'BAVOTASAN_SEE_MORE', __( 'See More', 'arcade-basic' ) );
+						?>
+    					<a href="#" id="more-site" class="btn btn-default btn-lg"><?php echo BAVOTASAN_SEE_MORE; ?></a>
+    				</div>
+
+    				<?php
+    				// Header image section
+    				bavotasan_header_images();
+    				?>
+				</div>
 			</div>
--->
 
-			<div id="navbar" class="navbar">
-				<nav id="site-navigation" class="navigation main-navigation" role="navigation">
-						<a href="/" id="logo" >
-							<img src="../wp-content/themes/ev/images/cityawake.png" />
-						</a>
-					<ul>
-						<li><a href="/programs" class="nav" id="accelerate">Programs</a></li>
-						<li id="festival-nav">
-						<a href="/the-festival" class="nav" >Festival<div class="nav-arrow"></div></a>
-						<div id="dropdown">
-							<ul>
-								<li><a href="#about">About</a></li>
-								<li><a href="#become_partners">Get Involved</a></li>
-								<li><a href="#calendar">Calendar</a></li>
-								<li><a href="#faqs">FAQs</a></li>
-								<li><a href="#for-partners">For Partners </a></li>
-							</ul>
-						</div>
-						</li>
-						<li><a href="/blog" class="nav" >Blog</a></li>
-						<li><a href="/team" class="nav" >Team</a></li>
-						<li><a href="http://ourconvention.com/" class="nav" target="_blank">Our Convention</a></li>
+		</header>
 
-					</ul>
-				</nav>
-			</div>
-
-
-			<h1>
-				<?php the_title(); ?>
-				<?php /* bloginfo( 'name' ); */ ?>
-			</h1>
-			<h2 class="site-description"><?php /* bloginfo( 'description' ); */ ?></h2>
-
-
-		</header><!-- #masthead -->
-
-		<div id="main" class="site-main">
+		<main>

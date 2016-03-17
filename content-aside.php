@@ -2,37 +2,15 @@
 /**
  * The template for displaying posts in the Aside post format
  *
- * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @since 1.0.6
  */
 ?>
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<h3 class="post-format"><?php _e( '<i class="fa fa-asterisk"></i> Aside', 'arcade-basic' ); ?></h3>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="entry-content">
-		<?php
-			/* translators: %s: Name of current post */
-			the_content( sprintf(
-				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'twentythirteen' ),
-				the_title( '<span class="screen-reader-text">', '</span>', false )
-			) );
+	    <div class="entry-content description">
+		    <?php the_content( __( 'Read more', 'arcade-basic') ); ?>
+	    </div><!-- .entry-content -->
 
-			wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-meta">
-		<?php if ( is_single() ) : ?>
-			<?php twentythirteen_entry_meta(); ?>
-			<?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
-
-			<?php if ( get_the_author_meta( 'description' ) && is_multi_author() ) : ?>
-				<?php get_template_part( 'author-bio' ); ?>
-			<?php endif; ?>
-
-		<?php else : ?>
-			<?php twentythirteen_entry_date(); ?>
-			<?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
-		<?php endif; // is_single() ?>
-	</footer><!-- .entry-meta -->
-</article><!-- #post -->
+	    <?php get_template_part( 'content', 'footer' ); ?>
+	</article>

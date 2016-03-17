@@ -1,37 +1,26 @@
 <?php
 /**
- * The template for displaying 404 pages (Not Found)
+ * The template for displaying 404 pages (Not Found).
  *
- * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @since 1.0.0
  */
-
 get_header(); ?>
 
-<script type="text/javascript">
-<!--
-   window.location="/";
-//-->
-</script>
-
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
-
-			<header class="page-header">
-				<h1 class="page-title"><?php _e( 'Not Found', 'twentythirteen' ); ?></h1>
-			</header>
-
-			<div class="page-wrapper">
-				<div class="page-content">
-					<h2><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'twentythirteen' ); ?></h2>
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentythirteen' ); ?></p>
-
-					<?php get_search_form(); ?>
-				</div><!-- .page-content -->
-			</div><!-- .page-wrapper -->
-
-		</div><!-- #content -->
-	</div><!-- #primary -->
+	<div class="container">
+		<div class="row">
+			<div id="primary" <?php bavotasan_primary_attr(); ?>>
+    			<article id="post-0" class="post error404 not-found">
+    				<i class="fa fa-frown-o"></i>
+    		    	<header>
+    		    	   	<h1 class="entry-title"><?php _e( '404 Error', 'arcade-basic' ); ?></h1>
+    		        </header>
+    		        <div class="entry-content description">
+    		            <p><?php _e( "Sorry. We can't seem to find the page you're looking for.", 'arcade-basic' ); ?></p>
+    		        </div>
+    		    </article>
+			</div>
+			<?php get_sidebar(); ?>
+		</div>
+	</div>
 
 <?php get_footer(); ?>
