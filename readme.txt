@@ -1,143 +1,38 @@
-= Arcade Basic =
+=== Edible Ventures ===
 
-* Created by Themes by bavotasan.com - http://themes.bavotasan.com/
-* Built by c.bavota http://bavotasan.com/
+Contributors: automattic
+Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
 
-== ABOUT ARCADE BASIC ==
+Requires at least: 4.0
+Tested up to: 4.4.2
+Stable tag: 1.0.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Create a truly unique design with Arcade, a lightweight and fully responsive HTML5 theme. Use the theme customizer to add your own header image, page layout, site width and more. Distinguish each post with one of the eight supported post formats, such as: Video, Image, Aside, Status, Audio, Quote, Link and Gallery. Install JetPack to display each of your galleries through a tiled view and jQuery carousel. Compatible with bbPress, BuddyPress, WPML & Woocommerce. Uses Google Fonts for improved typeface readability and works perfectly in desktop browsers, tablets and handheld devices.
+A starter theme called Edible Ventures, or underscores.
 
-== NOTES ==
+== Description ==
 
-* If you have a drop down list for your site navigation, the parent item should only be a grouping title with a "#" value for the URL parameter. The Bootstrap navbar requires a click to open the drop down list so any link that is set in the parent item will not work.
-* The four boxes on the home page are Icon & Text widgets added to the Home Page Top Area.
+Hi. I'm a starter theme called Edible Ventures, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 
-== NOT AVAILABLE IN ARCADE BASIC ==
+== Installation ==
+	
+1. In your admin panel, go to Appearance > Themes and click the Add New button.
+2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
+3. Click Activate to use your new theme right away.
 
-The free version of Arcade does not include the following features:
+== Frequently Asked Questions ==
 
-* Custom CSS editor
-* Font selector
-* Advanced color picker
-* Full width page/post option
-* Grid page template
-* Extended widgetized footer
-* Custom copyright text
-* Jumbo headline button option
-* Second sidebar layouts
-* Logo uploader
-* Social menu
-* Shortcodes
+= Does this theme support any plugins? =
 
-== LICENSES ==
+Edible Ventures includes support for Infinite Scroll in Jetpack.
 
-Bootstrap - http://getbootstrap.com/
-License: [[http://www.apache.org/licenses/LICENSE-2.0|Apache License v2.0]]
+== Changelog ==
 
-SASS - http://sass-lang.com/
-License: [[http://opensource.org/licenses/MIT|MIT]]
-Copyright: Hampton Catlin, Nathan Weizenbaum
+= 1.0 - May 12 2015 =
+* Initial release
 
-fillsize.js - http://github.com/rstacruz/jquery-stuff/tree/master/fillsize
-License: [[http://opensource.org/licenses/MIT|MIT]]
-Copyright: Rico Sta. Cruz
+== Credits ==
 
-Arctext - https://github.com/codrops/Arctext
-License: [[http://opensource.org/licenses/MIT|MIT]]
-Copyright: Pedro Botelho / Codrops
-
-html5shiv - http://code.google.com/p/html5shiv/
-License: [[http://opensource.org/licenses/MIT|MIT]]
-
-Font Awesome - http://fortawesome.github.io/Font-Awesome/
-License: [[http://opensource.org/licenses/MIT|MIT]]
-Copyright: Dave Gandy, https://twitter.com/davegandy
-
-Google Fonts - http://www.google.com/fonts/
-License: [[http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL|SIL Open Font License]]
-
-Stock Images - http://unsplash.com/
-Licensed under the terms of CC0
-
-== CHANGELOG ==
-
-03/14/2016 v1.0.7
-* H1 tag fix
-* Tweaked mobile menu
-* Updated text domain
-* Updated archive.php title tag
-* Updated Bootstrap
-* Updated screenshot
-* Updated language file
-
-05/12/2015 v1.0.6
-* Fix for post meta
-* Fix for custom menu widget
-* Added constant for 'See More' button
-* Updated license for images
-* CSS tweaks
-* Updated preview and about page
-* Fixed customizer default settings issue
-* Added filter hook for Post Block template
-* Updated language file
-
-02/20/2015 v1.0.5
-* Fixed pre_get_post function
-* Updated fittext script
-* Updated preview pro
-* Updated Bootstrap
-* Fixed footer credit
-* Updated Font Awesome to 4.3.0
-* Added next page link to pages
-* Moved editor styles to /library/css/admin
-* Moved jumbo headline option to widgets
-* Added multiple drop down levels to menu
-* Added about page with documentation
-* Added WPML support to custom widget
-* Fixed customizer issue
-* Added inner page arc option
-* Updated screenshot
-* Added Woocommerce support
-* Updated language file
-
-06/12/2014 v1.0.4.1
-* Fix for missing icon from widget
-
-06/11/2014 v1.0.4
-* Tweaked CSS for custom widget
-* Fixed custom header image on blog/attachment pages
-* Fixed jumbo headline validation
-* Fixed for RTL menu
-* Updated Font Awesome to 4.1.0
-* Validated custom widget
-* Added fittext option
-* Added post block page template
-* Updated language file
-
-03/05/2014 v1.0.3
-* Removed "From the Blog" when static front page is set
-* Updated archive meta
-* Added validation to front page
-* Fixed no arc bug
-* Added iframe max-width CSS
-* Fixed blog page loop bug
-* Syntax fix for header function
-
-02/05/2014 v1.0.2
-* Added microformats
-* Removed accessibility tag
-* Updated editor styles
-* Fixed arctext for RTL
-* Added HTML entities decode to textarea-filled elements
-* Sanitized customizer
-* Added image license
-* Removed 404 image, updated functions and CSS
-* Included HTML5 shiv file
-* Added body class through function
-
-02/04/2014 v1.0.1
-* Added instructions for arc radius and option to remove
-* Added clearfix to entry content and entry footer
-* Updated language file
-
-Public Release 02/03/2014
+* Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+* normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)

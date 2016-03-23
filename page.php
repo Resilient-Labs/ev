@@ -4,45 +4,35 @@
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
+ * and that other 'pages' on your WordPress site may use a
  * different template.
  *
- * @since 1.0.0
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package Edible_Ventures
  */
-get_header();
-?>
 
-	<div class="container">
-		<div class="row">
-			<div id="primary" <?php bavotasan_primary_attr(); ?>>
-				<?php
-				while ( have_posts() ) : the_post();
-					?>
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<?php
-						if ( is_search() ) :
-						the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
-						elseif ( is_front_page() ) :
-							the_title( '<h2 class="entry-title">', '</h2>' );
-						else :
-							the_title( '<h1 class="entry-title">', '</h1>' );
-						endif;
-						?>
+get_header(); ?>
 
-					    <div class="entry-content description clearfix">
-						    <?php the_content( __( 'Read more', 'arcade-basic') ); ?>
-					    </div><!-- .entry-content -->
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
-					    <?php get_template_part( 'content', 'footer' ); ?>
-					</article><!-- #post-<?php the_ID(); ?> -->
+			<?php
+			while ( have_posts() ) : the_post();
 
-					<?php
-					comments_template( '', true );
-				endwhile;
-				?>
-			</div>
-			<?php get_sidebar(); ?>
-		</div>
-	</div>
+				get_template_part( 'template-parts/content', 'page' );
 
-<?php get_footer(); ?>
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
+
+			endwhile; // End of the loop.
+			?>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+<?php
+get_sidebar();
+get_footer();

@@ -1,13 +1,13 @@
 <?php
 /**
- * The template for displaying Comments.
+ * The template for displaying comments.
  *
- * The area of the page that contains both current comments
- * and the comment form. The actual display of comments is
- * handled by a callback to bavotasan_comment() which is
- * located in the functions.php file.
+ * This is the template that displays the area of the page that contains both the current comments
+ * and the comment form.
  *
- * @since 1.0.0
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package Edible_Ventures
  */
 
 /*
@@ -15,45 +15,71 @@
  * the visitor has not yet entered the password we will
  * return early without loading the comments.
  */
-if ( post_password_required() )
+if ( post_password_required() ) {
 	return;
+}
 ?>
 
 <div id="comments" class="comments-area">
-	<?php // You can start editing here -- including this comment! ?>
 
-	<?php if ( have_comments() ) : ?>
-		<h2 id="comments-title">
-			<i class="fa fa-comments"></i>&nbsp;
+	<?php
+	// You can start editing here -- including this comment!
+	if ( have_comments() ) : ?>
+		<h2 class="comments-title">
 			<?php
-				printf( _n( '1 comment for &ldquo;%2$s&rdquo;', '%1$s comments for &ldquo;%2$s&rdquo;', get_comments_number(), 'arcade-basic' ),
-					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
+				printf( // WPCS: XSS OK.
+					esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'ev' ) ),
+					number_format_i18n( get_comments_number() ),
+					'<span>' . get_the_title() . '</span>'
+				);
 			?>
 		</h2>
 
-		<ol class="commentlist">
-			<?php wp_list_comments( array( 'callback' => 'bavotasan_comment' ) ); ?>
-		</ol><!-- .commentlist -->
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
+		<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
+			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'ev' ); ?></h2>
+			<div class="nav-links">
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<div id="comment-nav-below" role="navigation">
-			<div class="sr-only section-heading"><?php _e( 'Comment navigation', 'arcade-basic' ); ?></div>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'arcade-basic' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'arcade-basic' ) ); ?></div>
-		</div>
-		<?php endif; // check for comment navigation ?>
+				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'ev' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'ev' ) ); ?></div>
 
+			</div><!-- .nav-links -->
+		</nav><!-- #comment-nav-above -->
+		<?php endif; // Check for comment navigation. ?>
+
+		<ol class="comment-list">
+			<?php
+				wp_list_comments( array(
+					'style'      => 'ol',
+					'short_ping' => true,
+				) );
+			?>
+		</ol><!-- .comment-list -->
+
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
+		<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
+			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'ev' ); ?></h2>
+			<div class="nav-links">
+
+				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'ev' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'ev' ) ); ?></div>
+
+			</div><!-- .nav-links -->
+		</nav><!-- #comment-nav-below -->
 		<?php
-		/* If there are no comments and comments are closed, let's leave a note.
-		 * But we only want the note on posts and pages that had comments in the first place.
-		 */
-		if ( ! comments_open() && get_comments_number() ) : ?>
-		<p class="nocomments"><?php _e( 'Comments are closed.' , 'arcade-basic' ); ?></p>
-		<?php endif; ?>
+		endif; // Check for comment navigation.
 
-	<?php endif; // have_comments() ?>
+	endif; // Check for have_comments().
 
-	<?php comment_form( array(
-		'comment_notes_after' => '',
-	) ); ?>
-</div><!-- #comments .comments-area -->
+
+	// If comments are closed and there are comments, let's leave a little note, shall we?
+	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+
+		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'ev' ); ?></p>
+	<?php
+	endif;
+
+	comment_form();
+	?>
+
+</div><!-- #comments -->

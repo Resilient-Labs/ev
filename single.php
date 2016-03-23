@@ -1,30 +1,35 @@
 <?php
 /**
- * The Template for displaying all single posts.
+ * The template for displaying all single posts.
  *
- * @since 1.0.0
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ * @package Edible_Ventures
  */
+
 get_header(); ?>
 
-	<div class="container">
-		<div class="row">
-			<div id="primary" <?php bavotasan_primary_attr(); ?>>
-				<?php while ( have_posts() ) : the_post(); ?>
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
-					<?php get_template_part( 'content', get_post_format() ); ?>
+		<?php
+		while ( have_posts() ) : the_post();
 
-					<div id="posts-pagination" class="clearfix">
-						<h3 class="sr-only"><?php _e( 'Post navigation', 'arcade-basic' ); ?></h3>
-						<div class="previous pull-left"><?php previous_post_link( '%link', __( '&larr; %title', 'arcade-basic' ) ); ?></div>
-						<div class="next pull-right"><?php next_post_link( '%link', __( '%title &rarr;', 'arcade-basic' ) ); ?></div>
-					</div><!-- #posts-pagination -->
+			get_template_part( 'template-parts/content', get_post_format() );
 
-					<?php comments_template( '', true ); ?>
+			the_post_navigation();
 
-				<?php endwhile; // end of the loop. ?>
-			</div>
-			<?php get_sidebar(); ?>
-		</div>
-	</div>
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
 
-<?php get_footer(); ?>
+		endwhile; // End of the loop.
+		?>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+<?php
+get_sidebar();
+get_footer();
