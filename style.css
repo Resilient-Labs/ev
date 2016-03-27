@@ -33,6 +33,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Accessibility
 # Alignments
 # Clearings
+# Header
 # Widgets
 # Content
 	## Posts and pages
@@ -753,6 +754,16 @@ a:active {
 .site-content:after,
 .site-footer:after {
 	clear: both;
+}
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.site-header{
+	background-color: #000;
+
+}
+.site-branding{
+	text-align: center;
 }
 
 /*--------------------------------------------------------------
