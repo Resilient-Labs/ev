@@ -1,0 +1,110 @@
+/**{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+div{
+	height: 200px;
+	width: 100%;
+	background-color: #1A94BD;
+	
+}
+.float{
+	float: left;
+	margin-left: 150px;
+    padding-top: 40px;
+	padding-right: 25px;
+	margin-bottom: 50px;
+
+}
+.margin{
+	margin-left: 200px;
+	margin-right: 100px;
+	padding-top: 40px;
+	
+}
+.redback{
+	margin: 0 auto;
+
+}
+.textmargin{
+	position: relative;
+	margin-right: 100px;
+	color: white;
+	margin-top: 10px;
+	font-size: 10px;
+}
+.center{
+	margin: 0 auto;
+}
+*/
+
+*{
+	margin: 0;
+	padding: 0;
+}
+div{
+	height: 450px;
+	width: 100%;
+}
+
+.blue{
+	background-color: #1E8BB1;
+	width: 384px;
+	float: left;
+	font-size: 180px;
+	
+
+
+}
+
+.red{
+	background-color: #1E8BB1;
+	width: 900px;
+	float: right;
+	
+
+}
+.movePara{
+	
+	
+	
+}
+.moveTitle{
+	padding-top: 120px
+
+}
+.moveIcon{
+	padding-left: 160px;
+	padding-top: 125px;
+
+}
+.iconSize{
+	font-size: 25px;
+}
+.textSize{
+	font-size: 20px;
+	line-height: 150%
+}
+@media (max-width: 980px) {
+	.blue {
+		width: 100%;
+	}
+	.red{
+		width: 100%;
+		text-align: center;
+	}
+	.movePara {
+		width: 80%;
+		margin: 0 auto;
+	}
+	p{
+		text-align: center;
+	}
+
+
+  
+    
+  }
+
