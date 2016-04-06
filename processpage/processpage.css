@@ -1,0 +1,38 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+section{
+	width: 100%;
+	height: 325px;
+	background-color:#398394;
+}
+
+.container1{
+	float: left;
+	margin-top: 30px
+
+	
+	
+}
+i.fafa-binoculars{
+	font-size: 30px;
+	
+}
+div p{
+	
+	color: red;
+	
+	
+
+}
+div{
+
+	
+}
+.moveText{
+	margin-left: 150px;
+
+
+
+}
