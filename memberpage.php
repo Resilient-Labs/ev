@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html>
+<?php
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
-    <link rel="stylesheet" href="css/memberpage.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.0.2/css/hover-min.css">
-</head>
-
-<body>
     <div class="red">
         <nav class="navbar navbar-fixed">
             <div class="container-fluid">
@@ -118,50 +104,4 @@
             </div>
         </section>
     </div>
-    <div class="row-fluid">
-        <section class="black">
-            <div class="wrapper">
-                <div class="col-lg-4">
-                    <p class="footer">Follow us</p>
-                    <p>
-                        <a href=""><img src="http://s24.postimg.org/tdgvrprpd/ev_twitter.png" class="social"></a>
-                        <a href=""><img src="http://s24.postimg.org/gal98g1hd/ev_link.png" class="social"></a>
-                        <a href=""><img src="http://s24.postimg.org/sqmkfxk75/ev_insta.png" class="social"></a>
-                </div>
-                <div class="col-lg-4">
-                    <p class="footer">Get our newsletter</p>
-                    <div class="btn btnwhite">Subscribe</div>
-                </div>
-                <div class="col-lg-4">
-                    <p class="footer">Questions?</p>
-                    <div class="btn btnwhite">Email us</div>
-                </div>
-            </div>
-    </div>
-    </div>
-    <div class="row-fluid">
-        <section class="black">
-            <div class="col-lg-12">
-                <br>
-                <br>
-            </div>
-        </section>
-    </div>
-    <div class="row-fluid">
-        <section class="black">
-            <div class="wrapper">
-                <div class="col-lg-8">
-                    <p class="sub">© 2016 Edible Ventures Group, LLC | 155 Seaport Blvd 5th Floor, Boston MA, 02210 | 617.439.2000</p>
-                </div>
-                <div class="col-lg-2"></div>
-                <div class="col-lg-2"></div>
-            </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
-    <script src="js/members.js"></script>
-</body>
-
-</html>
+<?php include 
