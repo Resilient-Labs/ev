@@ -1,28 +1,38 @@
-<?php
-/**
- * The template for displaying the footer.
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package Edible_Ventures
- */
-
-?>
-
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ev' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'ev' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'ev' ), 'ev', '<a href="http://resilientcoders.org" rel="designer">Resilient Coders</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
-
-<?php wp_footer(); ?>
-
+<div class="container-fluid black fourth">
+        <div class="wrapper">
+            <div class="row-fluid">
+                <div class="col-lg-4">
+                    <p class="footer">Follow us</p>
+                    <p>
+                        <a href=""><img src="http://s24.postimg.org/tdgvrprpd/ev_twitter.png" class="social"></a>
+                        <a href=""><img src="http://s24.postimg.org/gal98g1hd/ev_link.png" class="social"></a>
+                        <a href=""><img src="http://s24.postimg.org/sqmkfxk75/ev_insta.png" class="social"></a>
+                </div>
+                <div class="col-lg-4">
+                    <p class="footer">Get our newsletter</p>
+                    <div class="btn btnwhite">Subscribe</div>
+                </div>
+                <div class="col-lg-4">
+                    <p class="footer">Questions?</p>
+                    <div class="btn btnwhite">Email us</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid black">
+        <div class="wrapper">
+            <div class="row-fluid">
+                <div class="col-lg-8">
+                    <p class="sub">© 2016 Edible Ventures Group, LLC | 155 Seaport Blvd 5th Floor, Boston MA, 02210 | 617.439.2000</p>
+                </div>
+                <div class="col-lg-2"></div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
 </body>
+
 </html>

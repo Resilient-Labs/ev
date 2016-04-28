@@ -1,0 +1,202 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100);
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Roboto Slab', sans-serif;
+  background: #000;
+  text-align: center;
+  color: #fff;
+}
+
+.topimg {
+  background: url('http://s22.postimg.org/46mkscgtd/rc_bckgr.png');
+  background-size: cover;
+}
+
+.navbar {
+  width: 90%;
+  margin: 0 auto;
+  background: transparent;
+  font-family: 'Helvetica Neue';
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #fff;
+  padding: 8px;
+}
+
+.navbar a {
+  background: transparent;
+  font-family: 'Helvetica Neue';
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #fff;
+}
+
+.navbar a:hover {
+  color: #000;
+}
+
+.navbar-brand {
+  text-transform: uppercase;
+  font-family: 'Helvetica Neue';
+  font-weight: 900;
+  color: #fff;
+  font-size: 2.3rem;
+}
+
+.navbtn {
+  background: transparent;
+  border-radius: 1px;
+  border: 2px solid #fff;
+  font-family: 'Helvetica Neue';
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+h1.top {
+  color: #fff;
+  margin: 0 auto;
+  padding: 4rem 0 4rem 0;
+  font-size: 3rem;
+  line-height: 4.2rem;
+}
+
+.fa-arrow-down {
+  color: #fff;
+  padding-bottom: 10rem;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+.padding {
+  padding-bottom: 1.5rem;
+}
+
+.icon {
+  max-width: 220px;
+  max-height: 180px;
+}
+
+.bold {
+  font-weight: 900;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.small {
+  font-weight: 300;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.spacer {
+  padding: 1.4rem 3rem 8rem 3rem;
+}
+.btn, .btnred, .btnwhite{
+  padding: 20px;
+  border-radius: none;
+}
+
+.btnred {
+  background: #C43F35;
+  border-radius: 0;
+  padding: 20px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: .09rem;
+  color: #fff;
+}
+
+.footer {
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  font-weight: 900;
+  font-family: 'Helvetica Neue';
+  font-size: 1.2rem;
+}
+
+.social {
+  display: inline-block;
+  padding: .4rem;
+  width: 23%;
+}
+
+.btnwhite {
+  background: #fff;
+  color: #000;
+  border-radius: 0;
+/*  width: 15.5rem;
+  height: 4.5rem;*/
+  margin-top: .4rem;
+  padding: 20px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.sub {
+  font-size: 1.1rem;
+  font-family: 'Helvetica Neue';
+  padding: 1rem 1rem 5rem 1rem;
+}
+
+.white {
+  background: #fff;
+  color: #000;
+}
+
+.red {
+  background: #C43F35;
+  color: #fff;
+}
+
+.black {
+  background: #000;
+  color: #fff;
+}
+
+.wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.first {
+  padding: 14rem 0 2rem 0;
+}
+
+.second {
+  padding: 8rem 0 10rem 0;
+}
+
+.third {
+  padding: 9rem 0 4rem 0;
+}
+
+.up {
+  margin-top: -55px;
+}
+
+.fourth {
+  padding: 9rem 0 4rem 0;
+}
+
+.redtext {
+  letter-spacing: .1rem;
+  font-size: 1.2rem;
+  font-family: 'Helvetica Neue';
+  font-weight: 100;
+}
+
+.bump {
+  margin-top: -15px;
+}
