@@ -10,9 +10,16 @@ body {
   padding: 0;
   width: 100%;
   font-family: 'Roboto Slab', sans-serif;
-  background: #000;
   text-align: center;
-  color: #fff;
+  color: #000;
+}
+
+.stickyNav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.9s ease;
 }
 
 .topimg {
@@ -20,15 +27,20 @@ body {
   background-size: cover;
 }
 
+.fixedPos {
+  position: fixed;
+}
+
 .navbar {
-  width: 90%;
+  /*width: 90%;*/
+  width: 100%;
   margin: 0 auto;
-  background: transparent;
   font-family: 'Helvetica Neue';
   text-transform: uppercase;
   font-weight: 900;
   color: #fff;
   padding: 8px;
+  z-index: 1000;
 }
 
 .navbar a {
@@ -97,15 +109,15 @@ h1.top {
 .spacer {
   padding: 1.4rem 3rem 8rem 3rem;
 }
-.btn, .btnred, .btnwhite{
+
+.bttn {
   padding: 20px;
-  border-radius: 0;
 }
 
 .btnred {
   background: #C43F35;
   border-radius: 0;
-  padding: 20px;
+  /*padding: 20px;*/
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 300;
@@ -123,7 +135,7 @@ h1.top {
 
 .social {
   display: inline-block;
-  padding: .4rem;
+  padding: .6rem;
   width: 23%;
 }
 
@@ -132,9 +144,9 @@ h1.top {
   color: #000;
   border-radius: 0;
 /*  width: 15.5rem;
-  height: 4.5rem;*/
-  margin-top: .4rem;
-  padding: 20px;
+  height: 4.5rem;
+  margin-top: .4rem;*/
+  /*padding: 20px;*/
   text-transform: uppercase;
   font-weight: 900;
 }
@@ -150,13 +162,17 @@ h1.top {
   color: #000;
 }
 
-.red {
-  background: #C43F35;
+.black {
+  background: #000;
   color: #fff;
 }
 
-.black {
-  background: #000;
+.transparent {
+  background: transparent;
+}
+
+.red {
+  background: #C43F35;
   color: #fff;
 }
 
@@ -178,7 +194,7 @@ h1.top {
 }
 
 .up {
-  margin-top: -55px;
+  margin-top: -40px;
 }
 
 .fourth {
@@ -621,3 +637,79 @@ p:hover.portfolio {
 section.white i{
   color:#C43F35;
 }
+
+/** **/
+.navBorderWhite {
+  border: 2px solid white;
+}
+
+.navBorderTransparent {
+  border: 1px solid transparent;
+}
+
+.bttnWhite {
+  background-color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #000;
+  width: 75%;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+.bttn {
+  padding: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  width: 75%;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7,
+.col-8, .col-9, .col-10, .col-11, .col-12 {
+  float: left;
+  min-height: .5px;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.col-1 {
+ width: 8.3333%;
+}
+.col-2 {
+  width: 16.6666666667%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33%;
+}
+.col-5 {
+  width: 41.6666666667%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.3333333333%;
+}
+.col-8 {
+  width: 66%
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.3333333%;
+}
+.col-11 {
+  width: 91.6666667%;
+}
+.col-12 {
+  width: 100%;
+}
+

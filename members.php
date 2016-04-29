@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="wrapper">
             <div class="row-fluid">
-                <div class="col-lg-12">
+                <div class="col-12">
                     <h2 style="font-weight:900;margin-top:45px;">Our Members</h2>
                     <br>
                     <p>Made up exclusively of angels with domain expertise in creating, manufacturing distributing and selling food and beverage products.</p>
@@ -190,7 +190,7 @@
     <div class="container-fluid">
         <div class="wrapper">
             <div class="row-fluid">
-                <div class="col-lg-12">
+                <div class="col-12">
                     <p>If you are interested in membership, <a class="contact" href="mailto:membership@edibleventuresgroup.com">contact us</a>. If you would like to see the group in action, please request a guest pass through an existing member of the group.</p>
                     <br>
                     <br>
@@ -198,59 +198,4 @@
             </div>
         </div>
     </div>
-    <div class="row-fluid">
-        <section class="black">
-            <div class="col-lg-12">
-                <br>
-                <br>
-                <br>
-            </div>
-        </section>
-    </div>
-    <div class="row-fluid">
-        <section class="black">
-            <div class="wrapper">
-                <div class="col-lg-4">
-                    <p class="footer">Follow us</p>
-                    <p>
-                        <a href=""><img src="http://s24.postimg.org/tdgvrprpd/ev_twitter.png" class="social"></a>
-                        <a href=""><img src="http://s24.postimg.org/gal98g1hd/ev_link.png" class="social"></a>
-                        <a href=""><img src="http://s24.postimg.org/sqmkfxk75/ev_insta.png" class="social"></a>
-                </div>
-                <div class="col-lg-4">
-                    <p class="footer">Get our newsletter</p>
-                    <div class="btn btnwhite">Subscribe</div>
-                </div>
-                <div class="col-lg-4">
-                    <p class="footer">Questions?</p>
-                    <div class="btn btnwhite">Email us</div>
-                </div>
-            </div>
-    </div>
-    </div>
-    <div class="row-fluid">
-        <section class="black">
-            <div class="col-lg-12">
-                <br>
-                <br>
-            </div>
-        </section>
-    </div>
-    <div class="row-fluid">
-        <section class="black">
-            <div class="wrapper">
-                <div class="col-lg-8">
-                    <p class="sub">© 2016 Edible Ventures Group, LLC | 155 Seaport Blvd 5th Floor, Boston MA, 02210 | 617.439.2000</p>
-                </div>
-                <div class="col-lg-2"></div>
-                <div class="col-lg-2"></div>
-            </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
-    <script src="js/members.js"></script>
-</body>
-
-</html>
+<?php include "footer.php" ?>

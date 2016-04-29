@@ -1,10 +1,10 @@
 <?php include "header.php" ?>
     <br>
     <br>
-    <div class="container-fluid">
+    <div class="container-fluid" id="contact">
         <div class="wrapper">
             <div class="row-fluid">
-                <div class="col-lg-12">
+                <div class="col-12">
                     <h1>If you have questions, send us a message!</h1>
                     <form class="cf">
                         <div class="half left cf">
@@ -23,9 +23,10 @@
     </div>
     <br>
     <br>
+<div class="container-fluid">
     <div class="row-fluid">
         <div class="wrapper">
-            <div class="col-lg-12">
+            <div class="col-12">
                 <p>
                     <p>If you meet our requirements and investment focus and are interested in presenting to Edible Ventures, please <a href="mailto:pitch@edibleventuresgroup.com">email us</a> an investment oriented pitch deck. Preference is given to plans that are submitted through a member or trusted third party of Edible Ventures.</p>
                     <br>
@@ -33,15 +34,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
-    <div class="row-fluid">
-        <section class="black">
-            <div class="col-lg-12">
-                <br>
-                <br>
-                <br>
-            </div>
-        </section>
     </div>
+    <br>
+    <br>
 <?php include "footer.php" ?>

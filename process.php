@@ -111,8 +111,8 @@
             <div class="col-lg-2"></div>
     </div>
     <!-- row -->
-    </div>
-    </section>
-    </div>
+</div>
+<br>
+<br>
 <?php include "footer.php" ?>
 

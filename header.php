@@ -14,7 +14,7 @@
 </head>
 
 <body>
-        <nav class="navbar navbar-fixed">
+        <nav class="navbar navbar-fixed red">
             <div class="container-fluid">
                 <div class="wrapper">
                     <div class="navbar-header">
@@ -27,10 +27,10 @@
                         <a class="navbar-brand" href="index.php">Edible Ventures</a>
                     </div>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="process.php">Process</a></li>
-                        <li><a href="members.php">Members</a></li>
-                        <li><a href="portfolio.php">Portfolio</a></li>
-                        <li><a href="contact.php">Contact Us</a></li>
+                        <li><a class="navBorderTransparent" href="process.php">Process</a></li>
+                        <li><a class="navBorderTransparent" href="members.php">Members</a></li>
+                        <li><a class="navBorderTransparent" href="portfolio.php">Portfolio</a></li>
+                        <li><a class="navBorderWhite" href="contact.php">Contact Us</a></li>
                     </ul>
                     </li>
                     </ul>

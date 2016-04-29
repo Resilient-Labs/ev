@@ -50,13 +50,4 @@
     </div>
     <br>
     <br>
-    <div class="row-fluid">
-        <section class="black">
-            <div class="col-lg-12">
-                <br>
-                <br>
-                <br>
-            </div>
-        </section>
-    </div>
 <?php include "footer.php" ?>
