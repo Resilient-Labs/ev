@@ -1,30 +1,4 @@
-<?php
-
-    <div class="red">
-        <nav class="navbar navbar-fixed">
-            <div class="container-fluid">
-                <div class="wrapper">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">Edible Ventures</a>
-                    </div>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Process</a></li>
-                        <li><a href="#">Members</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <button type="submit" class="btn navbtn">Contact Us</button>
-                    </ul>
-                    </li>
-                    </ul>
-                </div>
-            </div>
-    </div>
-    </nav>
+<?php include "header.php" ?>
     <br>
     <br>
     <div class="wrapper">
@@ -104,4 +78,4 @@
             </div>
         </section>
     </div>
-<?php include 
+<?php include "footer.php" ?>

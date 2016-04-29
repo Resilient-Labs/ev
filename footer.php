@@ -3,7 +3,6 @@
             <div class="row-fluid">
                 <div class="col-lg-4">
                     <p class="footer">Follow us</p>
-                    <p>
                         <a href=""><img src="http://s24.postimg.org/tdgvrprpd/ev_twitter.png" class="social"></a>
                         <a href=""><img src="http://s24.postimg.org/gal98g1hd/ev_link.png" class="social"></a>
                         <a href=""><img src="http://s24.postimg.org/sqmkfxk75/ev_insta.png" class="social"></a>
