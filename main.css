@@ -1,0 +1,97 @@
+/*
+Theme Name: EdibleVentures
+Theme URI: http://underscores.me/
+Author: Muigai
+Author URI: http://muigaiunaka.com
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ev
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+EdibleVentures is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Elements
+
+# Header
+	## Header-Navigation
+	## Header-Colors
+	## Header-Typography
+# Process
+# Members
+# Portfolio
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Header-Navigation
+--------------------------------------------------------------*/
+
+.ev_navbar {
+    width: 100%;
+    height: 80px;
+    min-height: 60px;
+    font-family: 'Helvetica Neue';
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 0 auto;
+}
+.ev_fixed {
+    position: fixed;
+}
+
+.ev_nav_link {
+
+}
+
+.ev_nav_link li {
+    padding: 10px;
+    text-decoration: none;
+    display: inline;
+}
+
+.ev_nav_link li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.ev_nav_link #home {
+    float: left;
+}
+
+/*--------------------------------------------------------------
+## Header-Color
+--------------------------------------------------------------*/
+.ev_red {
+    background: #C43F35;
+}
+
+.ev_transparent {
+    background-color: transparent;
+}
+
+.ev_black {
+    background-color: #000;
+}
+
+.ev_white {
+    background-color: #fff;
+}
+/*--------------------------------------------------------------
+## Header-Typography
+--------------------------------------------------------------*/
