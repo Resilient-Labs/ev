@@ -28,6 +28,7 @@
 <body <?php body_class(); ?>>
 
 <?php
+
 $defaultMenu = array(
 //		'container'=>'div',
 //		'container_class'=>'wrapper',
@@ -38,12 +39,19 @@ echo "<nav class=\"navbar navbar-fixed red\">";
 echo "<div class=\"container-fluid\">";
 echo "<div class=\"wrapper\">";
 echo "<div class=\"navbar-header\">";
-echo "<a class=\"navbar-brand\" href=\"index.php\">Edible Ventures</a>"; // TODO: Ask tyler about this problem
+echo "<a class=\"navbar-brand\" href=";
+echo "\"";
+$url = home_url();
+echo esc_url( $url );;
+echo "\"";
+echo ">Edible Ventures</a>"; // TODO: Ask tyler about this problem
+
 echo "</div> <!--navbar-header-->";
 	wp_nav_menu($defaultMenu);
 echo "</div> <!--wrapper-->";
 echo "</nav> <!--navbar-->";
 ?>
+
 
 <div id="page" class="site">
 	<!--<a class="skip-link screen-reader-text" href="#main">--><?php //esc_html_e( 'Skip to content', 'ev' ); ?><!--</a>-->
