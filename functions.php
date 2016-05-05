@@ -110,6 +110,16 @@ function ev_widgets_init() {
 }
 add_action( 'widgets_init', 'ev_widgets_init' );
 
+function register_theme_menus() {
+	register_nav_menus(
+		array(
+			'primary-menu' =>__('Primary Menu')
+		)
+	);
+}
+
+add_action('init', 'register_theme_menus');
+
 /**
  * Enqueue scripts and styles.
  */
@@ -123,6 +133,20 @@ function ev_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	/**
+	 * Custom scripts and styles included
+	 */
+
+	wp_enqueue_style('bootstrap_css', get_template_directory_uri() . '/css/bootstrap.css');
+	wp_enqueue_style('main_css', get_template_directory_uri() . '/css/main.css');
+	wp_enqueue_style('main_css', 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' );
+	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+	/** array for dependencies and boolean for if it is in the footer**/
+
+	wp_enqueue_script('header_js', get_template_directory_uri() . '/js/header.js', array('jquery'), '', true);
+	wp_enqueue_script('contact_js', get_template_directory_uri() . '/js/contact.js', '', '', false);
+	wp_enqueue_script('portfolio_js', get_template_directory_uri() . '/js/portfolio.js', array('jquery'), '', false);
+	wp_enqueue_script('contact_js', get_template_directory_uri() . '/js/contact.js', array('jquery'), '', false);
 }
 add_action( 'wp_enqueue_scripts', 'ev_scripts' );
 

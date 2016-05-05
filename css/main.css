@@ -638,13 +638,16 @@ section.white i{
   color:#C43F35;
 }
 
-/** **/
-.navBorderWhite {
-  border: 2px solid white;
+.navBorderTransparent{
+  border: 1px solid transparent;
 }
 
-.navBorderTransparent {
-  border: 1px solid transparent;
+.navBorderWhite , .navBorderTransparent:hover {
+  border: 1px solid white;
+}
+
+ul li {
+  float: left;
 }
 
 .bttnWhite {

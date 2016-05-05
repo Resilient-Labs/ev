@@ -24,15 +24,26 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Elements
-
+# Grid
+	## Columns
 # Header
 	## Header-Navigation
 	## Header-Colors
 	## Header-Typography
+# Home
+	# Home-Imagery
 # Process
 # Members
 # Portfolio
 
+/*--------------------------------------------------------------
+# Element
+--------------------------------------------------------------*/
+
+html, body, ul {
+    padding: 0;
+    margin: 0;
+}
 
 /*--------------------------------------------------------------
 # Header
@@ -42,56 +53,150 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 ## Header-Navigation
 --------------------------------------------------------------*/
 
-.ev_navbar {
+.ev-navbar {
     width: 100%;
-    height: 80px;
     min-height: 60px;
     font-family: 'Helvetica Neue';
     text-transform: uppercase;
     font-weight: 900;
     margin: 0 auto;
+    z-index: 1738;
+    font-size: 16px;
 }
-.ev_fixed {
+.ev-fixed {
     position: fixed;
 }
 
-.ev_nav_link {
-
+.ev-nav-container {
+    margin: 0 auto;
+    padding: 0;
 }
 
-.ev_nav_link li {
-    padding: 10px;
+.ev-nav-links, .ev-nav-title {
+    height: 100%;
+    margin: 0 auto;
+    min-height: 1px;
+    min-height: 60px;
+}
+
+.ev-nav-link, .ev-nav-home{
     text-decoration: none;
-    display: inline;
+    float: left;
+    display: block;
+    position: relative;
+    min-height: 60px;
 }
 
-.ev_nav_link li a {
+.ev-nav-link a, .ev-nav-home a {
+    display: block;
+    position: relative;
+    padding: 22px 15px;
     color: #fff;
     text-decoration: none;
+    line-height: 16px;
 }
 
-.ev_nav_link #home {
+.left {
     float: left;
+}
+
+.right {
+    float: right;
+}
+
+.ev-nav-link:hover, .ev-nav-links a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/*--------------------------------------------------------------
+## Grid
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Columns
+--------------------------------------------------------------*/
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7,
+.col-8, .col-9, .col-10, .col-11, .col-12 {
+    float: left;
+    min-height: .5px;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.col-1 {
+    width: 8.3333%;
+}
+.col-2 {
+    width: 16.6666666667%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-4 {
+    width: 33%;
+}
+.col-5 {
+    width: 41.6666666667%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-7 {
+    width: 58.3333333333%;
+}
+.col-8 {
+    width: 66%
+}
+.col-9 {
+    width: 75%;
+}
+.col-10 {
+    width: 83.3333333%;
+}
+.col-11 {
+    width: 91.6666667%;
+}
+.col-12 {
+    width: 100%;
 }
 
 /*--------------------------------------------------------------
 ## Header-Color
 --------------------------------------------------------------*/
-.ev_red {
+.ev-red {
     background: #C43F35;
 }
 
-.ev_transparent {
+.ev-transparent {
     background-color: transparent;
 }
 
-.ev_black {
+.ev-black {
     background-color: #000;
 }
 
-.ev_white {
+.ev-white {
     background-color: #fff;
 }
 /*--------------------------------------------------------------
 ## Header-Typography
 --------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Home
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Home-Imagery
+--------------------------------------------------------------*/
+
+.ev-header-img {
+    background: url('http://s22.postimg.org/46mkscgtd/rc_bckgr.png');
+    background-size: cover;
+    min-height: 543px;
+    color: white;
+}

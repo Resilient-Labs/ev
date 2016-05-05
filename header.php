@@ -9,41 +9,44 @@
  * @package EdibleVentures
  */
 
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
+
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-<!--	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">-->
+	<!--	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">-->
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<nav class="ev-navbar ev-red">
-	<div class="col-2"></div>
-<!-- Nav bar styling	-->
-	<div class="ev-nav-container col-8">
-		<ul class="ev-nav-title left">
-			<li id="home" class="ev-nav-home"><a href="index.php">Edible Ventures</a></li>
-		</ul>
-		<ul class="ev-nav-links right">
-			<li id="process" class="ev-nav-link"><a href="process.php">Process</a></li>
-			<li id="members" class="ev-nav-link"><a href="members.php">Members</a></li>
-			<li id="portfolio" class="ev-nav-link"><a href="portfolio.php">Portfolio</a></li>
-			<li id="contact" class="ev-nav-link"><a href="contact.php">Contact Us</a></li>
-		</ul>
-	</div>
-	<!-- Nav bar styling ends	-->
-	<div class="col-2"></div>
-</nav>
 
-
+<?php
+$defaultMenu = array(
+//		'container'=>'div',
+//		'container_class'=>'wrapper',
+	'theme_location'=> 'primary-menu',
+	'menu_class' => 'nav navbar-fixed navbar-right'
+);
+echo "<nav class=\"navbar navbar-fixed red\">";
+echo "<div class=\"container-fluid\">";
+echo "<div class=\"wrapper\">";
+echo "<div class=\"navbar-header\">";
+echo "<a class=\"navbar-brand\" href=\"index.php\">Edible Ventures</a>"; // TODO: Ask tyler about this problem
+echo "</div> <!--navbar-header-->";
+	wp_nav_menu($defaultMenu);
+echo "</div> <!--wrapper-->";
+echo "</nav> <!--navbar-->";
+?>
 
 <div id="page" class="site">
-<!--<a class="skip-link screen-reader-text" href="#main">--><?php //esc_html_e( 'Skip to content', 'ev' ); ?><!--</a>-->
+	<!--<a class="skip-link screen-reader-text" href="#main">--><?php //esc_html_e( 'Skip to content', 'ev' ); ?><!--</a>-->
 
 	<header id="masthead" class="site-header" role="banner">
 		<!--<div class="site-branding">
@@ -65,9 +68,9 @@
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ev' ); ?></button>
-<!--			--><?php //wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			<!--			--><?php //wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
-<!--	</header>-->
-<!-- #masthead -->
+		<!--	</header>-->
+		<!-- #masthead -->
 
-	<div id="content" class="site-content">
+		<div id="content" class="site-content">
