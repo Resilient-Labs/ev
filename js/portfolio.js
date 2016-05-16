@@ -1,5 +1,6 @@
 //jQuery(document).ready(function($) {
     // dentro de esta función $() funcionará como un álias de jQuery()
+var $ = jQuery.noConflict();
 $(function() {
     var selectedClass = "";
     $("p").click(function(){
@@ -13,5 +14,14 @@ $(function() {
 
     });
 });
+
+
+$("#toggle-menu").click(function() {
+        var bool = true;
+        if (bool) {
+            $('responsive-navbar').addClass('hide-nav');
+        }
+    }
+);
 
 //});

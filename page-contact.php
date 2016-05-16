@@ -13,6 +13,7 @@
  */
 
 get_header(); ?>
+
             <br>
             <br>
             <div class="container-fluid" id="contact">
@@ -42,7 +43,11 @@ get_header(); ?>
                     <div class="wrapper">
                         <div class="col-12">
                             <p>
-                            <p>If you meet our requirements and investment focus and are interested in presenting to Edible Ventures, please <a href="mailto:pitch@edibleventuresgroup.com">email us</a> an investment oriented pitch deck. Preference is given to plans that are submitted through a member or trusted third party of Edible Ventures.</p>
+                            <p>If you meet our requirements and investment focus
+                                and are interested in presenting to Edible Ventures, please
+                                <a href="mailto:pitch@edibleventuresgroup.com">email us</a>
+                                an investment oriented pitch deck. Preference is given to plans that
+                                are submitted through a member or trusted third party of Edible Ventures.</p>
                             <br>
                             <br>
                         </div>

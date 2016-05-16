@@ -141,15 +141,106 @@ function ev_scripts() {
 	wp_enqueue_style('bootstrap_css', get_template_directory_uri() . '/css/bootstrap.css');
 	wp_enqueue_style('main_css', get_template_directory_uri() . '/css/main.css');
 	wp_enqueue_style('main_css', 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' );
-	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+	/**
+	 * Register and load font awesome CSS files using a CDN.
+	 * @link   http://www.bootstrapcdn.com/#fontawesome
+	 * @author FAT Media
+	 */
+	wp_enqueue_style( 'prefix-font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', array(), '4.0.3' );
 	/** array for dependencies and boolean for if it is in the footer**/
 
-	wp_enqueue_script('header_js', get_template_directory_uri() . '/js/header.js', array('jquery'), '', true);
+
 	wp_enqueue_script('contact_js', get_template_directory_uri() . '/js/contact.js', '', '', false);
 	wp_enqueue_script('portfolio_js', get_template_directory_uri() . '/js/portfolio.js', array('jquery'), '', false);
 	wp_enqueue_script('contact_js', get_template_directory_uri() . '/js/contact.js', array('jquery'), '', false);
+	wp_enqueue_script('header_js', get_template_directory_uri() . '/js/header.js', array('jquery'), '', true);
 }
 add_action( 'wp_enqueue_scripts', 'ev_scripts' );
+
+/////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////// CODE FOR TEAM PROFILE //////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+
+/**
+ * Register `team` post type
+ */
+function team_post_type() {
+
+	// Labels
+	$labels = array(
+		'name' => _x("Team", "post type general name"),
+		'singular_name' => _x("Team", "post type singular name"),
+		'menu_name' => 'Team Members',
+		'add_new' => _x("Add New", "team item"),
+		'add_new_item' => __("Add New Profile"),
+		'edit_item' => __("Edit Profile"),
+		'new_item' => __("New Profile"),
+		'view_item' => __("View Profile"),
+		'search_items' => __("Search Profiles"),
+		'not_found' =>  __("No Profiles Found"),
+		'not_found_in_trash' => __("No Profiles Found in Trash"),
+		'parent_item_colon' => ''
+	);
+
+	// Register post type
+	register_post_type('team' , array(
+		'labels' => $labels,
+		'public' => true,
+		'has_archive' => false,
+		'menu_icon' => get_stylesheet_directory_uri() . '/lib/TeamProfiles/team-icon.png',
+		'rewrite' => false,
+		'supports' => array('title', 'editor', 'thumbnail')
+	) );
+}
+add_action( 'init', 'team_post_type', 0 );
+
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////// CODE FOR TEAM TAXONOMY //////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+
+/**
+ * Register `department` taxonomy
+ */
+function team_taxonomy() {
+
+	// Labels
+	$singular = 'Department';
+	$plural = 'Departments';
+	$labels = array(
+		'name' => _x( $plural, "taxonomy general name"),
+		'singular_name' => _x( $singular, "taxonomy singular name"),
+		'search_items' =>  __("Search $singular"),
+		'all_items' => __("All $singular"),
+		'parent_item' => __("Parent $singular"),
+		'parent_item_colon' => __("Parent $singular:"),
+		'edit_item' => __("Edit $singular"),
+		'update_item' => __("Update $singular"),
+		'add_new_item' => __("Add New $singular"),
+		'new_item_name' => __("New $singular Name"),
+	);
+
+	// Register and attach to 'team' post type
+	register_taxonomy( strtolower($singular), 'team', array(
+		'public' => true,
+		'show_ui' => true,
+		'show_in_nav_menus' => true,
+		'hierarchical' => true,
+		'query_var' => true,
+		'rewrite' => false,
+		'labels' => $labels
+	) );
+}
+add_action( 'init', 'team_taxonomy', 0 );
+
+/**
+ * Load CSS for template-team.php
+ */
+function team_styles() {
+	if ( is_page_template('template-team.php') )
+		wp_enqueue_style( 'team-template', get_stylesheet_directory_uri() . '/css/team.css' );
+}
+add_action( 'wp_enqueue_scripts', 'team_styles', 101 );
+
 
 /**
  * Implement the Custom Header feature.

@@ -19,7 +19,7 @@ body {
   top: 0;
   width: 100%;
   z-index: 1000;
-  transition: all 0.9s ease;
+  transition: all 0.4s ease;
 }
 
 .topimg {
@@ -41,6 +41,8 @@ body {
   color: #fff;
   padding: 8px;
   z-index: 1000;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .navbar a {
@@ -61,6 +63,12 @@ body {
   font-weight: 900;
   color: #fff;
   font-size: 2.3rem;
+}
+
+@media (min-width: 200px) and (max-width: 480px) {
+  .navbar-brand {
+    font-size: 1.7rem;
+  }
 }
 
 .navbtn {
@@ -135,18 +143,13 @@ h1.top {
 
 .social {
   display: inline-block;
-  padding: .6rem;
-  width: 23%;
+  /*padding: .6rem;*/
 }
 
 .btnwhite {
   background: #fff;
   color: #000;
   border-radius: 0;
-/*  width: 15.5rem;
-  height: 4.5rem;
-  margin-top: .4rem;*/
-  /*padding: 20px;*/
   text-transform: uppercase;
   font-weight: 900;
 }
@@ -156,7 +159,6 @@ h1.top {
   font-family: 'Helvetica Neue';
   padding: 1rem 1rem 5rem 1rem;
 }
-
 .white {
   background: #fff;
   color: #000;
@@ -272,6 +274,8 @@ section.black {
     max-width: 75rem;
   }
 }
+
+
 .team-grid {
   margin: 0;
   text-align: center;
@@ -297,26 +301,42 @@ section.black {
   box-sizing: border-box;
 }
 
-@media screen and (min-width: 28em) {
-  .team-grid__member {
-    width: 49%;
-    max-width: none;
-  }
-}
-@media screen and (min-width: 42em) {
-  .team-grid__member {
-    width: 32.5%;
-  }
-}
-@media screen and (min-width: 62em) {
-  .team-grid__member {
-    width: 19.45%;
-  }
-}
 .team-grid__member {
   position: relative;
   overflow: hidden;
+  width: 33%;
+  height: 0;
+  padding-bottom: 33%;
 }
+
+@media screen and (min-width: 8em)  {
+  .team-grid__member {
+    width: 100%;
+    padding-bottom: 100%;
+  }
+
+  .wrapper {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+@media screen and (min-width: 36em) {
+  .team-grid__member {
+    width: 49%;
+    padding-bottom: 49%;
+  }
+}
+@media screen and (min-width: 54em) {
+  .team-grid__member {
+    width: 32.5%;
+    padding-bottom: 32.5%;
+  }
+
+  .wrapper {
+    width: 70%;
+  }
+}
+
 
 .team-grid__member img {
   width: 100%;
@@ -324,6 +344,7 @@ section.black {
   border: 8px solid #fff;
   box-sizing: border-box;
   display: block;
+  position: absolute;
 }
 
 .member__info {
@@ -466,7 +487,6 @@ a:hover.contact {
 h1 {
   text-align: center;
   color: #a8a8a8;
-  text-shadow: 1px 1px 0 white;
 }
 
 form {
@@ -587,23 +607,27 @@ a:hover.bio_social {
 }*/
 
 .tile {
-  float:left; min-height:100px; max-height:150px; width:20%; border:1px #fff solid;
+  float:left;
+  min-height:120px;
+  max-height:150px;
+  width:25%;
+  border:1px #fff solid;
 }
 
 .tile:hover {
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
 .current {
-  background:#00C5CD;
+  background:#fff;
 }
 
 .food {
-  background: #CC3232;
+  background: #fff;
 }
 
 .bev {
-  background: #ddd;
+  background: #fff;
 }
 
 p.portfolio{
@@ -716,4 +740,100 @@ ul li {
   width: 100%;
 }
 
+.footer-button {
+  text-decoration: none;
+}
+.footer-button:hover {
+  text-decoration: none;
+}
+.fsi {
+  width: 52px;
+  height: 52px;
+}
+#portfolio {
+  min-height: 480px;
+}
 
+.portfolio-img {
+  height: 114px;
+  margin: 2px auto;
+}
+
+@media screen and (max-width: 540px) {
+  .tile {
+    width: 100%;
+    min-height: 200px;
+  }
+
+  .portfolio-img {
+    height: 194px;
+  }
+}
+
+@media screen and (min-width: 541px) and (max-width: 960px) {
+  .tile {
+    width: 50%;
+    min-height: 160px;
+  }
+
+.portfolio-img {
+  height: 154px;
+}
+
+}
+
+@media screen and (min-width: 961px) and (max-width: 1360px) {
+  .tile {
+    width: 33.33333%;
+    min-height: 120px;
+  }
+}
+
+.toggle-menu-icon {
+  display: none;
+}
+
+.r-nav, .r-nav:hover {
+  text-decoration: none;
+  -webkit-text-decoration: none;
+}
+
+.responsive-navbar:hover {
+  text-decoration: none;
+  color: white;
+}
+
+#toggle-menu {
+
+}
+
+.hide-nav {
+  display: none;
+}
+
+@media (max-width: 1120px) {
+
+  .hide-main-nav {
+    display: none;
+  }
+  
+  .toggle-menu-icon {
+    display: inline-block;
+    font-size: 32px;
+    line-height: 50px;
+    float: right;
+    cursor: auto;
+  }
+  .toggle-menu-icon:hover,
+  .toggle-menu-icon:active,
+  .toggle-menu-icon:focus {
+    cursor: auto;
+    text-decoration: none;
+  }
+
+  .responsive-navbar {
+    width: 100%;
+    font-size: 14px;
+    padding: 6px 0px;
+  }
+}

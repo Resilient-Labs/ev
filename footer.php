@@ -10,34 +10,27 @@
  */
 
 ?>
-
-<!--	</div><!-- #content -->
-
-<!--	<footer id="colophon" class="site-footer" role="contentinfo">-->
-<!--		<div class="site-info">-->
-<!--			<a href="--><?php //echo esc_url( __( 'https://wordpress.org/', 'ev' ) ); ?><!--">--><?php //printf( esc_html__( 'Proudly powered by %s', 'ev' ), 'WordPress' ); ?><!--</a>-->
-<!--			<span class="sep"> | </span>-->
-<!--			--><?php //printf( esc_html__( 'Theme: %1$s by %2$s.', 'ev' ), 'ev', '<a href="http://muigaiunaka.com" rel="designer">Muigai</a>' ); ?>
-<!--		</div><!-- .site-info -->
-<!--	</footer><!-- #colophon -->
-<!--</div><!-- #page
--->
+<!--FOOTER-->
 <div class="container-fluid black fourth">
 	<div class="wrapper">
 		<div class="row-fluid">
-			<div class="col-4">
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 				<p class="footer">Follow us</p>
-				<a href=""><img src="http://s24.postimg.org/tdgvrprpd/ev_twitter.png" class="social"></a>
-				<a href=""><img src="http://s24.postimg.org/gal98g1hd/ev_link.png" class="social"></a>
-				<a href=""><img src="http://s24.postimg.org/sqmkfxk75/ev_insta.png" class="social"></a>
+				<a href=""><img src="http://s24.postimg.org/tdgvrprpd/ev_twitter.png" class="social fsi"></a>
+				<a href=""><img src="http://s24.postimg.org/gal98g1hd/ev_link.png" class="social fsi"></a>
+				<a href=""><img src="http://s24.postimg.org/sqmkfxk75/ev_insta.png" class="social fsi"></a>
 			</div>
-			<div class="col-4">
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
 				<p class="footer">Get our newsletter</p>
-				<div class="white bttn blacktext">Subscribe</div>
+				<a href="" class="footer-button">
+					<div class="white bttn blacktext">Subscribe</div>
+				</a>
 			</div>
-			<div class="col-4">
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
 				<p class="footer">Questions?</p>
-				<div class="white bttn blacktext">Email us</div>
+				<a href="" class="footer-button">
+					<div class="white bttn blacktext">Email us</div>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -45,18 +38,15 @@
 <div class="container-fluid black">
 	<div class="wrapper">
 		<div class="row-fluid">
-			<div class="col-8">
+			<div class="col-xs-12 col-lg-12">
 				<p class="sub">© 2016 Edible Ventures Group, LLC | 155 Seaport Blvd 5th Floor, Boston MA, 02210 | 617.439.2000</p>
 			</div>
-			<div class="col-2"></div>
-			<div class="col-2"></div>
 		</div>
 	</div>
 </div>
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
-<script src="js/header.js"></script>
 
 <?php wp_footer(); ?>
 

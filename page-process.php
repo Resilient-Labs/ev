@@ -12,8 +12,6 @@
  * @package EdibleVentures
  */
 
-
-
 get_header(); ?>
    <?php
    $args = array(
@@ -26,7 +24,7 @@ get_header(); ?>
  <div class="container-fluid white">
         <div class="wrapper">
             <div class="row-fluid">
-                <div class="col-lg-12">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <h2 style="font-weight:900;margin-top:45px;">
                     <?php echo get_the_title(); ?>
                     </h2>
@@ -39,8 +37,6 @@ get_header(); ?>
 
 
  <?php endwhile; endif; wp_reset_postdata(); ?>
-
-
 
    <?php
 // CODE FOR PROCESS PAGE POPULATION STARTS
@@ -91,8 +87,8 @@ get_header(); ?>
 
     <div class="row-fluid">
         <section class="red">
-            <div class="col-lg-2"></div>
-            <div class="col-lg-8"><img src="http://s30.postimg.org/m0x731825/spoon_lwhite.png" style="padding-bottom:1.5rem;">
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8"><img src="http://s30.postimg.org/m0x731825/spoon_lwhite.png" style="padding-bottom:1.5rem;">
                 <br>
                 <br>
                 <h2 class="bump">Meet our members</h2>
@@ -105,13 +101,12 @@ get_header(); ?>
                 <br>
                 <br>
             </div>
-            <div class="col-lg-2"></div>
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
     </div>
     <!-- row -->
 </div>
-<br>
-<br>
+</div>
+</div>
+<!--FOOTER-->
 
-
-<?php
-get_footer();
+<?php get_footer();
